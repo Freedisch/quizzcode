@@ -1,14 +1,14 @@
-import Link from "next/link";
-import React from "react";
-import { Button, buttonVariants } from "./ui/Button";
-import { NavLink } from "react-router-dom";
-import { cn } from "@/lib/utils";
-import { Link as link2 } from "react-router-dom";
+import Link from 'next/link'
+import React from 'react'
+import { Button, buttonVariants } from './ui/Button'
+import { NavLink } from 'react-router-dom'
+import { cn } from '@/lib/utils'
+import { Link as link2 } from 'react-router-dom'
 const navigation = [
-  { title: "Dashboard", path: "/home", disabled: false },
-  { title: "Quizzes", path: "/opportunity", disabled: false },
-  { title: "⭐ Give a star", path: "/support" },
-];
+  { title: 'Dashboard', path: '/home', disabled: false },
+  { title: 'Quizzes', path: '/opportunity', disabled: false },
+  { title: '⭐ Give a star', path: '/support' },
+]
 
 export default function Navbar() {
   return (
@@ -16,7 +16,7 @@ export default function Navbar() {
       <div className="items-center space-x2 md:flex">
         <Link
           href="/"
-          className={buttonVariants({ variant: "link", size: "lg" })}
+          className={buttonVariants({ variant: 'link', size: 'lg' })}
         >
           Quizzcode v1.0
         </Link>
@@ -26,15 +26,15 @@ export default function Navbar() {
               <li
                 key={idx}
                 className={cn(
-                  "flex items-center text-lg font-medium transition-colors hover:text-foreground/80 sm:text-sm"
+                  'flex items-center text-lg font-medium transition-colors hover:text-foreground/80 sm:text-sm'
                 )}
               >
                 <a href={item.path}>{item.title}</a>
               </li>
-            );
+            )
           })}
         </nav>
       </div>
     </div>
-  );
+  )
 }
