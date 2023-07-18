@@ -1,8 +1,8 @@
-"use client";
+'use client'
 
-import Navbar from "@/components/navbar";
+import Navbar from '@/components/navbar'
 
-const stars = 0;
+const stars = 0
 export default function Test() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
@@ -11,7 +11,7 @@ export default function Test() {
       <main className="flex min-h-screen flex-col items-center justify-between p-24">
         <section className="space-y-6 pb-8 pt-6 md:pb-12 md:pt-10 lg:py-32">
           <div className="container flex max-w-[64rem] flex-col items-center gap-4 text-center">
-            Like our project on Devpost
+            Give a start to help support the project
             <h1 className="font-heading text-3xl sm:text-5xl md:text-6xl lg:text-7xl">
               Quizzcode helps you become more confident in your coding skills,
             </h1>
@@ -134,8 +134,8 @@ export default function Test() {
               Proudly Open Source
             </h2>
             <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
-              Transpact is open source and powered by open source software.{" "}
-              <br /> The code is available on GitHub .{" "}
+              Transpact is open source and powered by open source software.{' '}
+              <br /> The code is available on GitHub .{' '}
             </p>
             {stars && (
               <>
@@ -161,5 +161,5 @@ export default function Test() {
         </section>
       </main>
     </main>
-  );
+  )
 }
