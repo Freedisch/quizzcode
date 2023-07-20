@@ -2,6 +2,8 @@
 
 import { FunctionComponent, useState } from 'react'
 import { Button } from './Button'
+import { SupabaseAuthClient } from '@supabase/supabase-js/dist/module/lib/SupabaseAuthClient'
+import { SupabaseClient } from '@supabase/supabase-js'
 
 interface SignInButtonProps {}
 
@@ -12,6 +14,7 @@ const SignInButton: FunctionComponent<SignInButtonProps> = () => {
     //     setIsLoading(true)
     //     await signI
     // }
+    // const { data, error } = await 
   }
   return (
     <Button onClick={signInWithGoogle} isLoading={isLoading}>
