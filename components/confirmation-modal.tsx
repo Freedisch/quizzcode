@@ -3,7 +3,7 @@ import ReactPortal from './react-portal'
 import { deflate } from 'zlib'
 
 interface ConfirmationModalProps {
-  children: React.ReactChildren | React.ReactChild
+  children: React.ReactNode
   isOpen: boolean
   handleClose: () => void
 }
@@ -24,7 +24,7 @@ const ConfirmationModal = ({
   }, [handleClose])
 
   useEffect(() => {
-    document.body.style.overflow = 'hiden'
+    document.body.style.overflow = 'hidden'
     return (): void => {
       document.body.style.overflow = 'unset'
     }
@@ -36,10 +36,13 @@ const ConfirmationModal = ({
     <ReactPortal wrapperId="react-portal">
       <>
         <div
-          className="fixed top-0 left-0 w-screen z-40 bg-neutal-800
+          className="fixed top-0 left-0 w-screen z-40 bg-slate-300
         opacity-5a"
         />
-        <div className="fixed rounded flex flex-col box-border min-w-fit overflow-hidden p-5 bg-zinc-800 inset-y-32 inset-x-32"></div>
+
+        <div className="fixed rounded flex flex-col box-border min-w-fit overflow-hidden p-5  inset-y-32 inset-x-32">
+          <div className="box-border h-5/6">{children}</div>
+        </div>
       </>
     </ReactPortal>
   )
