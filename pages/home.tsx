@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react'
 
-const stars = 0;
+const stars = 0
 export default function home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
@@ -129,8 +129,8 @@ export default function home() {
             Proudly Open Source
           </h2>
           <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
-            Transpact is open source and powered by open source software. <br />{" "}
-            The code is available on GitHub .{" "}
+            Transpact is open source and powered by open source software. <br />{' '}
+            The code is available on GitHub .{' '}
           </p>
           {stars && (
             <>
@@ -155,5 +155,5 @@ export default function home() {
         </div>
       </section>
     </main>
-  );
+  )
 }

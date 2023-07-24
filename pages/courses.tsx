@@ -8,7 +8,7 @@ import { Button } from '@/components/ui/Button'
 import { Link } from 'lucide-react'
 import React from 'react'
 
-export default function Dashboard() {
+export default function Courses() {
   const loading = true
   return (
     <div>

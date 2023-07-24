@@ -8,7 +8,7 @@ import { Button } from '@/components/ui/Button'
 import { Link } from 'lucide-react'
 import React from 'react'
 
-export default function Dashboard() {
+export default function Quizzes() {
   const loading = true
   return (
     <div>
@@ -16,14 +16,14 @@ export default function Dashboard() {
         <DashboardLayout
           type="bidder"
           loading={loading}
-          heading="My Courses"
-          text="View and Enroll to the latest courses"
+          heading="My Quizzes"
+          text="Leverage your skills by taking a new real-time assessement"
           buttonLabel="Latest updates"
         >
           <DashboardShell>
             <DashboardHeader
-              heading="My Bids"
-              text="View and manage your bids."
+              heading="My quizzes"
+              text="View and manage your quizzes."
             >
               <Link to="/bid/all">
                 <Button variant="outline">
