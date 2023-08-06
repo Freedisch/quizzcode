@@ -3,7 +3,7 @@ export const dashboardConfig: DashboardConfig = {
   mainNav: [
     {
       title: 'Courses',
-      href: '/courses',
+      href: '/',
     },
     {
       title: 'Quizzes',
@@ -13,39 +13,39 @@ export const dashboardConfig: DashboardConfig = {
   sidebarNav: [
     {
       title: 'Dashboard',
-      href: '/dashboard',
+      href: '/',
       icon: 'users',
     },
     {
       title: 'List of courses',
-      href: '/courses',
+      href: '/',
       icon: 'package',
     },
     {
       title: 'View quizzes',
-      href: '/quizzes',
+      href: '/',
       icon: 'package',
     },
     {
       title: 'View scores',
-      href: '/scores',
+      href: '/',
       icon: 'package',
     },
   ],
   sidebarNavBidder: [
     {
       title: 'My Courses',
-      href: '/courses',
+      href: '/',
       icon: 'package',
     },
     {
       title: 'View quizzes',
-      href: '/quizzes',
+      href: '/',
       icon: 'package',
     },
     {
       title: 'View scores',
-      href: '/scores',
+      href: '/',
       icon: 'package',
     },
   ],
