@@ -9,6 +9,7 @@ import Sidebar from '@/components/sidebar'
 import { Button } from '@/components/ui/Button'
 import Courses from '@/pages/courses'
 import Dashboard from '@/pages/dashboard'
+import Home from '@/pages/home'
 import Quizzes from '@/pages/quizzes'
 import Scores from '@/pages/scores'
 import { Link } from 'lucide-react'
@@ -21,11 +22,7 @@ export default function Test() {
     <BrowserRouter>
       <Navbar />
       <Routes>
-        <Route path="/" element={<Dashboard />} />
-        <Route path="/home" element={<Dashboard />} />
-        <Route path="/courses" element={<Courses />} />
-        <Route path="/quizzes" element={<Quizzes />} />
-        <Route path="/scores" element={<Scores />} />
+        <Route path="/" element={<Home />} />
       </Routes>
     </BrowserRouter>
   )

@@ -8,8 +8,8 @@ interface DashboardNavProps {
 }
 
 export function DashboardNav({ items }: DashboardNavProps) {
-  const location = useLocation()
-  const path = location.pathname
+  //const location = useLocation()
+  //const path = location.pathname
 
   if (!items?.length) {
     return null
@@ -19,7 +19,7 @@ export function DashboardNav({ items }: DashboardNavProps) {
     <nav className="grid items-start gap-2">
       {items.map((item, index) => {
         const Icon = Icons[item.icon || 'arrowRight']
-        console.log(path, item.href)
+        //console.log(path, item.href)
 
         return (
           item.href && (
@@ -27,7 +27,7 @@ export function DashboardNav({ items }: DashboardNavProps) {
               <span
                 className={cn(
                   'group flex items-center rounded-md px-3 py-2 text-sm font-medium hover:bg-accent hover:text-accent-foreground',
-                  path === item.href ? 'bg-slate-200' : 'bg-transparent',
+                  item.href ? 'bg-slate-200' : 'bg-transparent',
                   item.disabled && 'cursor-not-allowed opacity-80'
                 )}
               >

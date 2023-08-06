@@ -1,7 +1,7 @@
 import React from 'react'
 
 const stars = 0
-export default function home() {
+export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <section className="space-y-6 pb-8 pt-6 md:pb-12 md:pt-10 lg:py-32">
@@ -11,8 +11,8 @@ export default function home() {
             Quizzcode helps you become more confident in your coding skills,
           </h1>
           <p className="max-w-[42rem] leading-normal text-muted-foreground sm:text-xl sm:leading-8">
-            An Decentralised App based on React and NEAR Protocol. <br />
-            Transparent and trustless contract creation and tracking.
+            Welcome into the new designed skill assessements. <br />
+            Sign in to start your learning journey.
           </p>
           <div className="space-x-4">GitHub</div>
         </div>
@@ -26,8 +26,7 @@ export default function home() {
             Features
           </h2>
           <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
-            This project is build using React 18 and NEAR Protocol with Rust
-            powering the smart contract.
+            This project is build using React 18 and Supabase.
           </p>
         </div>
         <div className="mx-auto grid justify-center gap-4 sm:grid-cols-2 md:max-w-[64rem] md:grid-cols-3">
@@ -98,7 +97,7 @@ export default function home() {
               <div className="space-y-2">
                 <h3 className="font-bold">Authentication</h3>
                 <p className="text-sm text-muted-foreground">
-                  Authentication using NextAuth.js and middlewares.
+                  Authentication using Supabase auth.js and middlewares.
                 </p>
               </div>
             </div>
@@ -119,7 +118,7 @@ export default function home() {
         </div>
         <div className="mx-auto text-center md:max-w-[58rem]">
           <p className="leading-normal text-muted-foreground sm:text-lg sm:leading-7">
-            Transpact also includes a indentity verification.
+            Quizzecode also includes a feedback services at each tests.
           </p>
         </div>
       </section>
@@ -129,8 +128,8 @@ export default function home() {
             Proudly Open Source
           </h2>
           <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
-            Transpact is open source and powered by open source software. <br />{' '}
-            The code is available on GitHub .{' '}
+            Quizzecode is open source and powered by open source software.{' '}
+            <br /> The code is available on GitHub .{' '}
           </p>
           {stars && (
             <>

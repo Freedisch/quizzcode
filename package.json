@@ -24,7 +24,7 @@
     "next": "13.4.8",
     "postcss": "8.4.24",
     "react": "18.2.0",
-    "react-dom": "18.2.0",
+    "react-dom": "^18.2.0",
     "react-icons": "^4.10.1",
     "react-router-dom": "^6.14.1",
     "tailwind-merge": "^1.13.2",
@@ -33,6 +33,7 @@
     "typescript": "5.1.6"
   },
   "devDependencies": {
+    "encoding": "^0.1.13",
     "regenerator-runtime": "^0.13.11",
     "supabase": "^1.77.9"
   }

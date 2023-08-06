@@ -8,9 +8,9 @@ import ConfirmationModal from './confirmation-modal'
 import { supabase } from '@/midelsupabase'
 import { UserResponse } from '@supabase/supabase-js'
 const navigation = [
-  { title: 'Dashboard', path: '/home', disabled: false },
-  { title: 'Quizzes', path: '/opportunity', disabled: false },
-  { title: '⭐ Give a star', path: '/support' },
+  { title: 'Dashboard', path: '/courses', disabled: false },
+  { title: 'Quizzes', path: '/quizzes', disabled: false },
+  { title: '⭐ Give a star', path: 'https://github.com/Freedisch/quizzcode' },
 ]
 
 export default function Navbar() {
@@ -69,8 +69,8 @@ export default function Navbar() {
               <div className="mt-2 text-center">
                 <span>Login to Quizzcode</span>
                 <p>
-                  An Decentralised App based on React and NEAR Protocol. <br />
-                  Transparent and trustless contract creation and tracking.
+                  Welcome into the new designed skill assessements. <br />
+                  Sign in to start your learning journey.
                 </p>
               </div>
               <div className="flex justify-center gap-2 mt-9 sm:flex">
