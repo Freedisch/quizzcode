@@ -1,10 +1,12 @@
 import Link from 'next/link'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Button, buttonVariants } from './ui/Button'
 import { NavLink } from 'react-router-dom'
 import { cn } from '@/lib/utils'
 import { Link as link2 } from 'react-router-dom'
 import ConfirmationModal from './confirmation-modal'
+import { supabase } from '@/midelsupabase'
+import { UserResponse } from '@supabase/supabase-js'
 const navigation = [
   { title: 'Dashboard', path: '/home', disabled: false },
   { title: 'Quizzes', path: '/opportunity', disabled: false },
@@ -14,6 +16,27 @@ const navigation = [
 export default function Navbar() {
   const [confirmationModalOpen, setConfirmationModalOpen] =
     useState<boolean>(false)
+  const [user, setUser] = useState<any>(null)
+  useEffect(() => {
+    checkUser()
+    window.addEventListener('hashchange', () => {
+      checkUser()
+    })
+  }, [])
+  const checkUser = async () => {
+    const user = await supabase.auth.getUser()
+    setUser(user)
+  }
+  const signInWithGithub = async () => {
+    await supabase.auth.signInWithOAuth({
+      provider: 'github',
+    })
+    console.log('est')
+  }
+  const signOut = async () => {
+    await supabase.auth.signOut()
+    setUser(null)
+  }
   return (
     <div className="fixed backdrop-blur-sm bg-white/75 z-50 top-0 left-0 right-0 h-20 shadow-sm flex items-center justify-between">
       <div className="items-center space-x2 md:flex">
@@ -42,21 +65,40 @@ export default function Navbar() {
             isOpen={confirmationModalOpen}
             handleClose={() => setConfirmationModalOpen(!confirmationModalOpen)}
           >
-            <div className="flex flex-col justify-between h-full w-full">
-              <div className="flex flex-col mt-auto mb-auto items-center p-8">
+            <div className="relative w-full max-w-lg p-4 mx-auto bg-slate-100 rounded-md shadow-lg">
+              <div className="mt-2 text-center">
                 <span>Login to Quizzcode</span>
+                <p>
+                  An Decentralised App based on React and NEAR Protocol. <br />
+                  Transparent and trustless contract creation and tracking.
+                </p>
               </div>
-              <div className="flex- flex-col sm:flex-row justify-center gap-8 align-center">
-                <Button className="" onClick={() => {}}>
-                  Login with Google
-                </Button>
+              <div className="flex justify-center gap-2 mt-9 sm:flex">
+                <Button onClick={() => {}}>Google</Button>
 
-                <Button className="" onClick={() => {}}>
-                  Login with Google
+                <Button onClick={signInWithGithub}>Github</Button>
+                <Button
+                  className="hover:bg-red-500 text-red-400"
+                  onClick={() =>
+                    setConfirmationModalOpen(!confirmationModalOpen)
+                  }
+                >
+                  Cancel
                 </Button>
               </div>
             </div>
           </ConfirmationModal>
+        )}
+      </div>
+      <div className=" flex mx-10 justify-between items-center">
+        {user ? (
+          <Button className="" onClick={signOut}>
+            SignOut
+          </Button>
+        ) : (
+          <Button className="" onClick={() => setConfirmationModalOpen(true)}>
+            Login
+          </Button>
         )}
       </div>
     </div>
