@@ -19,11 +19,9 @@ const stars = 0
 export default function Test() {
   const loading = true
   return (
-    <BrowserRouter>
+    <div>
       <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-      </Routes>
-    </BrowserRouter>
+      <Home />
+    </div>
   )
 }
