@@ -20,7 +20,6 @@ export default function Test() {
   const loading = true
   return (
     <div>
-      <Navbar />
       <Home />
     </div>
   )
